@@ -16,7 +16,13 @@
 <li>{{ Lang::get('backend/news_categories.crud.title') }}</li>
 <!-- // mv_breadcrumb_end -->
 @stop
-
+@section('utility')
+<!-- // mv_go_up_start -->
+<a href="{{ url('/') }}" class="btn btn-default btn-sm">
+    <i class="fa fa-reply"></i> {{ Lang::get('app.button.go_up', ['crud_title' => Lang::get('backend/news_categories.crud.title')]) }}
+</a>
+<!-- // mv_go_up_end -->
+@stop
 @section('content')
 <form method="post" enctype="multipart/form-data" action="{{ route('admin.news_categories.store') }}" class="form-horizontal" role="form">
     {{ csrf_field() }}
