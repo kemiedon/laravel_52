@@ -77,7 +77,18 @@
         'desc'          => Lang::get('backend/news_categories.desc.picture'),
     ])
     <!-- // mv_view_form_picture_end -->
-
+    <!-- // mv_view_form_textarea_start -->
+    @include('backend/layouts/forms/textarea', [
+			'name'          => 'testimony',
+			'label'         => Lang::get('backend/client_testimonies.testimony.label'),
+			'required'      => '',
+			'error_message' => '',
+			'value'         => 	Input::old('testimonys'),
+			'desc'          =>  Lang::get('backend/client_testimonies.testimony.desc'),
+			'rows'          => 20,
+			'min_length'    => 5,
+		])
+    <!-- // mv_view_form_textarea_end -->
     <!-- // mv_view_form_tinymce_start -->
     @include('backend/_layouts/forms/tinymce', [
         'name'          => 'description',
