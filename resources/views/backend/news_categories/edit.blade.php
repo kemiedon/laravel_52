@@ -35,20 +35,20 @@
 
     <!-- // mv_view_form_radio_start -->
     @include('backend/_layouts/forms/radio', [
-        'name'          => 'check',
-        'label'         => Lang::get('backend/news_categories.label.check'),
-        'value'         => old('check') ?: $news_category->check,
-        'desc'          => Lang::get('backend/news_categories.desc.check'),
+        'name'          => 'name',
+        'label'         => Lang::get('backend/news_categories.label.name'),
+        'value'         => old('name') ?: $news_category->name,
+        'desc'          => Lang::get('backend/news_categories.desc.name'),
         'data_provider' => [1 => '是', 0 => '否' ] ,
     ])
     <!-- // mv_view_form_radio_end -->
 
     <!-- // mv_view_form_select_start -->
     @include('backend/_layouts/forms/select', [
-        'name'          => 'category',
-        'label'         => Lang::get('backend/news_categories.label.category'),
-        'value'         => old('category') ?: $news_category->category,
-        'desc'          => Lang::get('backend/news_categories.desc.category'),
+        'name'          => 'name',
+        'label'         => Lang::get('backend/news_categories.label.name'),
+        'value'         => old('name') ?: $news_category->name,
+        'desc'          => Lang::get('backend/news_categories.desc.name'),
         'data_provider' => [1 => '公告',2 => '活動',3 => '優惠'],
     ])
     <!-- // mv_view_form_select_end -->
@@ -74,12 +74,12 @@
 
     <!-- // mv_view_form_picture_start -->
     @include('backend/_layouts/forms/picture', [
-        'name'          => 'picture',
-        'label'         => Lang::get('backend/news_categories.label.picture'),
+        'name'          => 'name',
+        'label'         => Lang::get('backend/news_categories.label.name'),
         'delete_box'    => NULL,
         'upload_path'   => NULL,
-        'value'         => asset('uploads/news_categories/'.$picture = old('picture') ?: $news_category->picture),
-        'desc'          => Lang::get('backend/news_categories.desc.picture'),
+        'value'         => asset('uploads/news_categories/'.$news_categories = old('name') ?: $news_category->name),
+        'desc'          => Lang::get('backend/news_categories.desc.name'),
     ])
     <!-- // mv_view_form_picture_end -->
 
